@@ -27,6 +27,12 @@ export default class PostConcept {
     await this.posts.deleteOne({ _id });
     return { msg: "Post deleted successfully!" };
   }
+
+  async getById(_id: ObjectId) {
+    // TODO 1: Implement this method
+    // Hint: check out this.users.readOne
+    return await this.posts.readOne(_id);
+  }
 }
 
 export class PostAuthorNotMatchError extends NotAllowedError {
